@@ -205,7 +205,6 @@ button {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background-image: url("/assets/hero-construction-site.jpg");
   background-position: center;
   background-size: cover;
   transform: scale(1.01);

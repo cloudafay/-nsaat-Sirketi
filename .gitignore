@@ -3,6 +3,13 @@ dist/
 .vite-dev*.log
 .vite-dev.pid
 screenshots-*.png
+gorsel-katalog/
+iylestirilecek olanlar/
+web-gorseller-final/
+web-gorseller-*-sag-alt-kontrol.jpg
+image-contact-sheet.jpg
+image-sheet-*.jpg
+İnsaat görselleri karmaşık/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

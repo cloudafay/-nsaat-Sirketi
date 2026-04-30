@@ -47,44 +47,46 @@ const company = {
   facebookHref: "",
 };
 
+const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+
 const images = {
-  logo: "/assets/mir-logo.jpg",
-  hero: "/assets/hero-construction-site.jpg",
-  facade: "/assets/facade-renovation-scaffold.jpg",
-  team: "/assets/team-wall-application.jpg",
-  brandedTeam: "/assets/branded-team-site.jpg",
-  highRise: "/assets/high-rise-facade-work.jpg",
-  insulation: "/assets/terrace-insulation.jpg",
-  ceramic: "/assets/ceramic-installation-detail.jpg",
-  interior: "/assets/finished-interior-floor.jpg",
-  floor: "/assets/clean-delivery-floor.jpg",
-  decorative: "/assets/decorative-facade-finish.jpg",
-  card: "/assets/business-card-contact.jpg",
+  logo: asset("assets/mir-logo.jpg"),
+  hero: asset("assets/hero-construction-site.jpg"),
+  facade: asset("assets/facade-renovation-scaffold.jpg"),
+  team: asset("assets/team-wall-application.jpg"),
+  brandedTeam: asset("assets/branded-team-site.jpg"),
+  highRise: asset("assets/high-rise-facade-work.jpg"),
+  insulation: asset("assets/terrace-insulation.jpg"),
+  ceramic: asset("assets/ceramic-installation-detail.jpg"),
+  interior: asset("assets/finished-interior-floor.jpg"),
+  floor: asset("assets/clean-delivery-floor.jpg"),
+  decorative: asset("assets/decorative-facade-finish.jpg"),
+  card: asset("assets/business-card-contact.jpg"),
 };
 
 const galleryImages = [
-  "/gallery/gallery-03.jpg",
-  "/gallery/gallery-04.jpg",
-  "/gallery/gallery-06.jpg",
-  "/gallery/gallery-07.jpg",
-  "/gallery/gallery-08.jpg",
-  "/gallery/gallery-09.jpg",
-  "/gallery/gallery-10.jpg",
-  "/gallery/gallery-11.jpg",
-  "/gallery/gallery-13.jpg",
-  "/gallery/gallery-15.jpg",
-  "/gallery/gallery-19.jpg",
-  "/gallery/gallery-21.jpg",
-  "/gallery/gallery-22.jpg",
-  "/gallery/gallery-24.jpg",
-  "/gallery/gallery-25.jpg",
-  "/gallery/gallery-28.jpg",
-  "/gallery/gallery-29.jpg",
-  "/gallery/gallery-30.jpg",
-  "/gallery/gallery-31.jpg",
-  "/gallery/gallery-32.jpg",
-  "/gallery/gallery-33.jpg",
-  "/gallery/gallery-34.jpg",
+  asset("gallery/gallery-03.jpg"),
+  asset("gallery/gallery-04.jpg"),
+  asset("gallery/gallery-06.jpg"),
+  asset("gallery/gallery-07.jpg"),
+  asset("gallery/gallery-08.jpg"),
+  asset("gallery/gallery-09.jpg"),
+  asset("gallery/gallery-10.jpg"),
+  asset("gallery/gallery-11.jpg"),
+  asset("gallery/gallery-13.jpg"),
+  asset("gallery/gallery-15.jpg"),
+  asset("gallery/gallery-19.jpg"),
+  asset("gallery/gallery-21.jpg"),
+  asset("gallery/gallery-22.jpg"),
+  asset("gallery/gallery-24.jpg"),
+  asset("gallery/gallery-25.jpg"),
+  asset("gallery/gallery-28.jpg"),
+  asset("gallery/gallery-29.jpg"),
+  asset("gallery/gallery-30.jpg"),
+  asset("gallery/gallery-31.jpg"),
+  asset("gallery/gallery-32.jpg"),
+  asset("gallery/gallery-33.jpg"),
+  asset("gallery/gallery-34.jpg"),
 ];
 
 const content = {
@@ -444,7 +446,7 @@ function App() {
 
       <main>
         <section className="hero" id="top" aria-label="MIR Constructions LTD">
-          <div className="hero-bg" />
+          <div className="hero-bg" style={{ backgroundImage: `url(${images.hero})` }} />
           <div className="hero-overlay" />
           <div className="hero-content page-pad">
             <p className="eyebrow">{t.hero.eyebrow}</p>
