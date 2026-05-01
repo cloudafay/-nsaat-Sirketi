@@ -84,16 +84,12 @@ button {
   min-width: 240px;
 }
 
-.brand-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  color: var(--white);
-  background: var(--navy);
-  border: 1px solid rgba(9, 34, 54, 0.18);
-  border-radius: 6px;
+.brand-logo {
+  display: block;
+  width: 38px;
+  height: 48px;
+  object-fit: contain;
+  flex: 0 0 auto;
 }
 
 .brand span {
@@ -759,9 +755,9 @@ button {
     min-width: auto;
   }
 
-  .brand-mark {
-    width: 38px;
-    height: 38px;
+  .brand-logo {
+    width: 34px;
+    height: 44px;
   }
 
   .brand strong {

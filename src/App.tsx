@@ -50,7 +50,7 @@ const company = {
 const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 
 const images = {
-  logo: asset("assets/mir-logo.jpg"),
+  logo: asset("assets/mir-logo-transparent.png"),
   hero: asset("assets/hero-construction-site.jpg"),
   facade: asset("assets/facade-renovation-scaffold.jpg"),
   team: asset("assets/team-wall-application.jpg"),
@@ -633,9 +633,7 @@ function Header({
   return (
     <header className="site-header">
       <a className="brand" href="#top" aria-label="MIR Constructions LTD">
-        <span className="brand-mark" aria-hidden="true">
-          <Building2 size={22} />
-        </span>
+        <img className="brand-logo" src={images.logo} alt="" aria-hidden="true" />
         <span>
           <strong>MIR Construction</strong>
           <small>Constructions LTD</small>
