@@ -81,15 +81,19 @@ button {
   display: flex;
   align-items: center;
   gap: 12px;
-  min-width: 190px;
+  min-width: 240px;
 }
 
-.brand img {
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 42px;
   height: 42px;
-  object-fit: contain;
-  background: var(--white);
-  border: 1px solid var(--line);
+  color: var(--white);
+  background: var(--navy);
+  border: 1px solid rgba(9, 34, 54, 0.18);
+  border-radius: 6px;
 }
 
 .brand span {
@@ -100,8 +104,9 @@ button {
 
 .brand strong {
   color: var(--navy);
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 800;
+  white-space: nowrap;
 }
 
 .brand small {
@@ -592,11 +597,62 @@ button {
   padding: 16px;
 }
 
-.contact-panel img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+.clean-contact-card {
+  display: grid;
+  gap: 14px;
+  min-height: 300px;
+  padding: 28px;
+  color: #f2d0c8;
+  background:
+    linear-gradient(140deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+    #2d3438;
+  border: 1px solid rgba(242, 208, 200, 0.36);
   border-radius: 6px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.clean-card-icon {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  color: #e8a79b;
+}
+
+.clean-card-icon svg:last-child {
+  margin-left: -24px;
+  margin-bottom: 20px;
+}
+
+.clean-card-title {
+  display: grid;
+  gap: 5px;
+}
+
+.clean-card-title span {
+  font-size: 24px;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.clean-card-title small {
+  color: rgba(242, 208, 200, 0.74);
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.clean-contact-card a {
+  color: #f2d0c8;
+  font-size: 20px;
+  font-weight: 850;
+}
+
+.clean-contact-card p {
+  margin: 0;
+  color: rgba(242, 208, 200, 0.84);
+  font-size: 15px;
+  line-height: 1.45;
 }
 
 .social-row {
@@ -695,6 +751,7 @@ button {
   }
 
   .site-header {
+    gap: 8px;
     padding-inline: 14px;
   }
 
@@ -702,9 +759,13 @@ button {
     min-width: auto;
   }
 
-  .brand img {
+  .brand-mark {
     width: 38px;
     height: 38px;
+  }
+
+  .brand strong {
+    font-size: 15px;
   }
 
   .brand small {
@@ -888,6 +949,19 @@ button {
 
   .contact-panel {
     padding: 12px;
+  }
+
+  .clean-contact-card {
+    min-height: 260px;
+    padding: 22px;
+  }
+
+  .clean-card-title span {
+    font-size: 20px;
+  }
+
+  .clean-contact-card a {
+    font-size: 18px;
   }
 
   .mobile-contact-bar {

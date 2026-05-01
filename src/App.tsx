@@ -91,7 +91,7 @@ const galleryImages = [
 
 const content = {
   en: {
-    metaTitle: "MIR Constructions LTD | Limassol Renovation Services",
+    metaTitle: "MIR Constructions LTD | Cyprus Renovation Services",
     nav: {
       services: "Services",
       work: "Work",
@@ -99,9 +99,9 @@ const content = {
       contact: "Contact",
     },
     hero: {
-      eyebrow: "Limassol, Cyprus",
+      eyebrow: "All Cyprus",
       title: "Painting, insulation and renovation work built to last",
-      text: "MIR Constructions LTD delivers exterior and interior finishing work across Limassol, from facade painting and waterproofing to ceramics, marble and clean handover.",
+      text: "MIR Constructions LTD delivers exterior and interior finishing work across Cyprus, from facade painting and waterproofing to ceramics, marble and clean handover.",
       primary: "Get a quote on WhatsApp",
       secondary: "Call now",
       points: ["Exterior facades", "Interior finishes", "Local site team"],
@@ -223,7 +223,7 @@ const content = {
     ],
     contact: {
       label: "Contact",
-      title: "Ask for a site visit or quote in Limassol",
+      title: "Ask for a site visit or quote across Cyprus",
       text: "Send a message on WhatsApp, call directly, or open the address in maps.",
       whatsapp: "WhatsApp",
       call: "Call",
@@ -234,7 +234,7 @@ const content = {
     },
   },
   el: {
-    metaTitle: "MIR Constructions LTD | Υπηρεσίες Ανακαίνισης στη Λεμεσό",
+    metaTitle: "MIR Constructions LTD | Υπηρεσίες Ανακαίνισης στην Κύπρο",
     nav: {
       services: "Υπηρεσίες",
       work: "Έργα",
@@ -242,9 +242,9 @@ const content = {
       contact: "Επικοινωνία",
     },
     hero: {
-      eyebrow: "Λεμεσός, Κύπρος",
+      eyebrow: "Όλη η Κύπρος",
       title: "Βαφές, μονώσεις και ανακαινίσεις με αντοχή στον χρόνο",
-      text: "Η MIR Constructions LTD αναλαμβάνει εξωτερικά και εσωτερικά τελειώματα στη Λεμεσό, από βαφές προσόψεων και στεγανοποιήσεις μέχρι κεραμικά, μάρμαρα και καθαρή παράδοση.",
+      text: "Η MIR Constructions LTD αναλαμβάνει εξωτερικά και εσωτερικά τελειώματα σε όλη την Κύπρο, από βαφές προσόψεων και στεγανοποιήσεις μέχρι κεραμικά, μάρμαρα και καθαρή παράδοση.",
       primary: "Προσφορά μέσω WhatsApp",
       secondary: "Καλέστε τώρα",
       points: ["Εξωτερικές προσόψεις", "Εσωτερικά τελειώματα", "Τοπικό συνεργείο"],
@@ -366,7 +366,7 @@ const content = {
     ],
     contact: {
       label: "Επικοινωνία",
-      title: "Ζητήστε επίσκεψη ή προσφορά στη Λεμεσό",
+      title: "Ζητήστε επίσκεψη ή προσφορά σε όλη την Κύπρο",
       text: "Στείλτε μήνυμα στο WhatsApp, καλέστε απευθείας ή ανοίξτε τη διεύθυνση στον χάρτη.",
       whatsapp: "WhatsApp",
       call: "Κλήση",
@@ -592,7 +592,18 @@ function App() {
               </div>
             </div>
             <div className="contact-panel" aria-label="MIR Constructions contact card">
-              <img src={images.card} alt="" decoding="async" />
+              <div className="clean-contact-card">
+                <div className="clean-card-icon" aria-hidden="true">
+                  <Home size={54} />
+                  <Paintbrush size={36} />
+                </div>
+                <div className="clean-card-title">
+                  <span>MIR Constructions</span>
+                  <small>High-end painting · decorative ceramics · premium finishes</small>
+                </div>
+                <a href={company.phoneHref}>{company.phoneDisplay}</a>
+                <p>{company.address}</p>
+              </div>
               <SocialRow t={t} />
             </div>
           </div>
@@ -622,9 +633,11 @@ function Header({
   return (
     <header className="site-header">
       <a className="brand" href="#top" aria-label="MIR Constructions LTD">
-        <img src={images.logo} alt="" />
+        <span className="brand-mark" aria-hidden="true">
+          <Building2 size={22} />
+        </span>
         <span>
-          <strong>MIR</strong>
+          <strong>MIR Construction</strong>
           <small>Constructions LTD</small>
         </span>
       </a>
